@@ -1,0 +1,225 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* DEFAULT */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SECTION1 */
+#section1{
+  background-image: url('./assets/img/banner-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+.rs{
+  border: 1px solid #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.rs:hover{
+  background-color: #3f73a0;
+  transform: scale(0.9);
+}
+.bouton{
+  border: 1px solid #fff !important;
+}
+.bouton:hover{
+  background-color: #3f73a0 !important;  
+  transform: scale(0.9);
+}
+/* SECTION2 */
+#section2{
+  background-image: linear-gradient(rgba(81, 15, 97, 0.622),rgb(30, 1, 35)), url('./assets/img/color-sharp.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.skills{
+  /* height: 400px; */
+  flex-direction: column !important;
+  top: 25%;
+  width: 75% !important;
+}
+.colonneimg{
+  flex-direction: column;
+}
+
+/* SECTION3 */
+#section3{
+ flex-direction: column !important;
+}
+.para{
+  width: 75%;
+}
+.tab{
+  background-color: rgb(12, 42, 106) !important;
+  width: 200px;
+}
+.tab:focus{
+  background-color: #3ba1c9 !important;
+}
+.rowtab:hover{
+  background-color: white;
+}
+.profile-card{
+  position:relative;
+  overflow: hidden;
+}
+.profile-card:hover .profile-img img
+{
+  transform: scale(1.2);
+}
+.profile-card .profile-img img{
+  width:100%;
+  height:auto;
+}
+.profile-card .profile-content::before{
+  content: "";
+  position:absolute;
+  top:0;
+  left:0;
+  transform: scale(1,1);
+  transition: all 0.50s linear;
+}
+.profile-card .profile-content::after{
+  content: "";
+  position:absolute;
+  bottom:0;
+  right:0;
+  transition: all 0.50s linear;  
+}
+.profile-card .profile-content{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.profile-card .profile-content:hover{
+  background-color: rgba(128, 13, 61, 0.5);
+}
+.profile-card .profile-content .title{
+  font-size:24px;
+  color:#fff;
+  opacity:0;
+  transform: translateY(-100px);
+  transition:all 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
+}
+.profile-card:hover .title{
+  opacity:1;
+  transform: translateY(0);
+}
+.profile-card:hover .title::after{
+  content:"";
+   display:block;
+}
+.profile-card .profile-content .title > span{
+  display:block;
+}
+
+@media (max-width: 775px) {
+  .nav-tabs{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  } 
+  .nav-tabs .nav-item{
+    width: 33%;
+  }
+  .tab{
+    width: 100%;
+   }
+}
+/* SECTION5 */
+#section5{
+  background-image: linear-gradient(rgba(81, 15, 97, 0.622),rgb(30, 1, 35)), url('./assets/img/color-sharp.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+input:focus{
+  box-shadow: none !important;
+}
+.news{
+ top: 25%;
+ width: 75% !important;
+}
+
+@media (max-width:780px) {
+ .colonne{
+   margin-top: 20px !important;
+ }
+ .colR{
+  flex:  0 0 8%;
+ }
+}
+@media (max-width:570px) {
+  .skills, .news{
+    top: 50%;
+    width: 90% !important;
+    }
+    .para{
+      width: 100% !important;
+    }
+}
+@media (max-width:990px) {
+  #section1{
+    height: 1000px !important;
+  }
+  .colR{
+    flex:  0 0 8% !important;
+   }
+   .bouton{
+    margin-left: 0 !important;
+   }
+}
